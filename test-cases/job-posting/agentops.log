@@ -1,0 +1,4 @@
+2024-12-03 10:18:28,693 - INFO - Session Replay: https://app.agentops.ai/drilldown?session_id=64c2914e-a1af-4050-b7ac-c99bf7a86517
+2024-12-03 10:18:33,845 - INFO - SIGINT detected. Ending session...
+2024-12-03 10:18:35,740 - INFO - Session Stats - Duration: 5.6s | Cost: $0.001640 | LLMs: 1 | Tools: 0 | Actions: 0 | Errors: 0
+2024-12-03 10:18:35,741 - INFO - Session Replay: https://app.agentops.ai/drilldown?session_id=64c2914e-a1af-4050-b7ac-c99bf7a86517

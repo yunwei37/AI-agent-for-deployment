@@ -1,0 +1,11 @@
+{
+    "research_agent": {
+        "model": "gpt-4o-mini"
+    },
+    "writer_agent": {
+        "model": "gpt-4o"
+    },
+    "review_agent": {
+        "model": "gpt-4o"
+    }
+}

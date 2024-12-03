@@ -1,10 +1,15 @@
+import json
 from typing import List
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
-
-# Check our tools documentations for more information on how to use them
 from crewai_tools import SerperDevTool, ScrapeWebsiteTool, WebsiteSearchTool, FileReadTool
 from pydantic import BaseModel, Field
+
+# # Load the LLM configuration from JSON
+# with open('config/map_agent_llm.json', 'r') as f:
+#     llm_config = json.load(f)
+
+# print(llm_config)
 
 web_search_tool = WebsiteSearchTool()
 seper_dev_tool = SerperDevTool()
@@ -27,7 +32,9 @@ class JobPostingCrew:
 
     @agent
     def research_agent(self) -> Agent:
+        # print(llm_config['research_agent'])
         return Agent(
+            llm= 'gpt-4o-mini', # llm_config['research_agent'],
             config=self.agents_config['research_agent'],
             tools=[web_search_tool, seper_dev_tool],
             verbose=True
@@ -35,7 +42,9 @@ class JobPostingCrew:
     
     @agent
     def writer_agent(self) -> Agent:
+        # print(llm_config['writer_agent'])
         return Agent(
+            llm= 'gpt-4o-mini', # llm_config['research_agent'],
             config=self.agents_config['writer_agent'],
             tools=[web_search_tool, seper_dev_tool, file_read_tool],
             verbose=True
@@ -43,7 +52,9 @@ class JobPostingCrew:
     
     @agent
     def review_agent(self) -> Agent:
+        # print(llm_config['review_agent'])
         return Agent(
+            llm= 'gpt-4o-mini', # llm_config['research_agent'],
             config=self.agents_config['review_agent'],
             tools=[web_search_tool, seper_dev_tool, file_read_tool],
             verbose=True
@@ -82,7 +93,8 @@ class JobPostingCrew:
     def industry_analysis_task(self) -> Task:
         return Task(
             config=self.tasks_config['industry_analysis_task'],
-            agent=self.research_agent()
+            agent=self.research_agent(),
+            output_file='answer.md',
         )
 
     @crew
@@ -95,3 +107,6 @@ class JobPostingCrew:
             verbose=2,
             output_log_file='log.txt',
         )
+
+# Example of creating a JobPostingCrew instance
+job_posting_crew = JobPostingCrew(llm_config)

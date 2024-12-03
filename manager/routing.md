@@ -39,5 +39,9 @@ This is the llm application description:
 
 {application-description}
 
+The Agents needs to be assigned to the tasks.
+
+{agents-description}
+
 ========================================
 Output should be in json format.
