@@ -10,6 +10,17 @@ def translate_chunk(chunk, translation_prompt):
     full_prompt = translation_prompt + chunk
     return ai_generate_content(full_prompt)
 
+def extract_text_from_pdf(pdf_file):
+    """Extract text from a PDF file using pdfplumber."""
+    text = ""
+    try:
+        with pdfplumber.open(pdf_file) as pdf:
+            for page in pdf.pages:
+                text += page.extract_text() or ""  # Handle None returns
+    except Exception as e:
+        print(f"Error processing {pdf_file}: {str(e)}")
+    return text
+
 def translate_large_pdf(pdf_file, chunk_size=5000, target_language="Chinese"):
     """
     Translate a large PDF file by splitting it into chunks and translating each chunk.
@@ -41,5 +52,7 @@ def translate_large_pdf(pdf_file, chunk_size=5000, target_language="Chinese"):
 
 # Example usage
 if __name__ == "__main__":
-    translated_content = translate_large_pdf("test.pdf")
+    translated_content = translate_large_pdf("test-cases/workflow/test-pdf/2003-xensosp.pdf")
     print(translated_content)
+    with open("test-cases/workflow/test-pdf/ray_translated_content.txt", "w") as f:
+        f.write(translated_content)
