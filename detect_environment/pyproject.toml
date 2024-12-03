@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "detect_environment"
+version = "0.1.0"
+description = "detect-environment using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = "^0.41.1" }
+
+[tool.poetry.scripts]
+detect_environment = "detect_environment.main:run"
+train = "detect_environment.main:train"
+replay = "detect_environment.main:replay"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
