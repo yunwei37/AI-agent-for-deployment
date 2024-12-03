@@ -39,6 +39,7 @@ def translate_large_pdf(pdf_file, chunk_size=5000, target_language="Chinese"):
         print(f"Translating chunk {i+1}/{len(chunks)}...")
         # Combine prompt with chunk
         full_prompt = translation_prompt + chunk
+        # each ai_generate_content should be a ray task
         translated_text = ai_generate_content(full_prompt)
         translated_chunks.append(translated_text)
     
@@ -50,3 +51,6 @@ def translate_large_pdf(pdf_file, chunk_size=5000, target_language="Chinese"):
 if __name__ == "__main__":
     translated_content = translate_large_pdf("test-cases/workflow/test-pdf/2003-xensosp.pdf")
     print(translated_content)
+    # save to file
+    with open("test-cases/workflow/test-pdf/2003-xensosp-translated.txt", "w") as f:
+        f.write(translated_content)
