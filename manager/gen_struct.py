@@ -25,7 +25,7 @@ def write_file(file_path, content):
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(content)
 
-def generate_cleanup_content(content, schema):
+def ai_generate_content(content, schema):
     """Send the prompt and content to OpenAI's API and get the structured content."""
 
     completion = client.chat.completions.create(
@@ -65,7 +65,7 @@ def main():
         schema = json.loads(read_file(args.schema_file))
 
         # Generate structured content
-        structured_content = generate_cleanup_content(input_content, schema)
+        structured_content = ai_generate_content(input_content, schema)
 
         # Write to output file
         write_file(args.output_file, json.dumps(structured_content, indent=2))
