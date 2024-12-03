@@ -2,22 +2,27 @@ import os
 import sys
 import json
 from dotenv import load_dotenv
-from tavily import TavilyClient
+import requests
 
 # Load environment variables from .env file
 load_dotenv()
 
 def tavily_search(query) -> str:
-    # Instantiating your TavilyClient
-    tavily_client = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
+    url = "https://api.tavily.com/search"
+    headers = {
+        "Content-Type": "application/json"
+    }
+    data = {
+        "api_key": os.getenv("TAVILY_API_KEY"),
+        "query": query
+    }
 
-    # Executing a search query
-    response = tavily_client.search(query, 
-                                    include_images=True, 
-                                    include_answer=True, 
-                                    search_depth="advanced", 
-                                    include_image_descriptions=True)
-    return str(response)
+    response = requests.post(url, headers=headers, json=data)
+
+    if response.status_code == 200:
+        return response.text
+    else:
+        raise Exception(f"Request failed with status code {response.status_code}: {response.text}")
 
 def main():
     if len(sys.argv) != 3:

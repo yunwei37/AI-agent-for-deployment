@@ -98,7 +98,7 @@ def add_references(content, reference_list):
 
 def humanize_content(content):
     """Make content more engaging and human-like."""
-    with open("humanize_prompt.txt", "r") as f:
+    with open("test-cases/workflow/humanize_prompt.txt", "r") as f:
         humanize_prompt = f.read()
     
     final_prompt = f"{humanize_prompt}\n\nContent to humanize:\n{content}"
