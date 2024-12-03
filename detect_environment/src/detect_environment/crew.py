@@ -1,5 +1,6 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
+from detect_environment.tools.custom_tool import BashExecutionTool
 
 # Uncomment the following line to use an example of a custom tool
 # from detect_environment.tools.custom_tool import MyCustomTool
@@ -17,7 +18,7 @@ class DetectEnvironmentCrew():
 	def researcher(self) -> Agent:
 		return Agent(
 			config=self.agents_config['researcher'],
-			# tools=[MyCustomTool()], # Example of custom tool, loaded on the beginning of file
+			tools=[BashExecutionTool()],
 			verbose=True
 		)
 
@@ -50,6 +51,8 @@ class DetectEnvironmentCrew():
 			agents=self.agents, # Automatically created by the @agent decorator
 			tasks=self.tasks, # Automatically created by the @task decorator
 			process=Process.sequential,
+			planning=True,
 			verbose=2,
+			output_log_file='log.txt',
 			# process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
 		)
