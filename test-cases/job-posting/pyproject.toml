@@ -9,6 +9,7 @@ readme = "README.md"
 python = ">=3.12,<=3.13"
 crewai = {extras = ["tools"], version = "^0.41.1"}
 python-dotenv = "^1.0.1"
+agentops = "0.3.18"
 
 [tool.poetry.scripts]
 job_posting = "job_posting.main:run"

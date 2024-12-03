@@ -4,6 +4,10 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai_tools import SerperDevTool, ScrapeWebsiteTool, WebsiteSearchTool, FileReadTool
 from pydantic import BaseModel, Field
+from langchain.chat_models import ChatOpenAI
+
+llm4_mini = ChatOpenAI(model='gpt-4o-mini')
+llm4 = ChatOpenAI(model='gpt-4o')
 
 # # Load the LLM configuration from JSON
 # with open('config/map_agent_llm.json', 'r') as f:
@@ -34,7 +38,7 @@ class JobPostingCrew:
     def research_agent(self) -> Agent:
         # print(llm_config['research_agent'])
         return Agent(
-            llm= 'gpt-4o-mini', # llm_config['research_agent'],
+            llm= llm4_mini, # llm_config['research_agent'],
             config=self.agents_config['research_agent'],
             tools=[web_search_tool, seper_dev_tool],
             verbose=True
@@ -44,7 +48,7 @@ class JobPostingCrew:
     def writer_agent(self) -> Agent:
         # print(llm_config['writer_agent'])
         return Agent(
-            llm= 'gpt-4o-mini', # llm_config['research_agent'],
+            llm= llm4, # llm_config['research_agent'],
             config=self.agents_config['writer_agent'],
             tools=[web_search_tool, seper_dev_tool, file_read_tool],
             verbose=True
@@ -54,7 +58,7 @@ class JobPostingCrew:
     def review_agent(self) -> Agent:
         # print(llm_config['review_agent'])
         return Agent(
-            llm= 'gpt-4o-mini', # llm_config['research_agent'],
+            llm= llm4, # llm_config['research_agent'],
             config=self.agents_config['review_agent'],
             tools=[web_search_tool, seper_dev_tool, file_read_tool],
             verbose=True
@@ -109,4 +113,4 @@ class JobPostingCrew:
         )
 
 # Example of creating a JobPostingCrew instance
-job_posting_crew = JobPostingCrew(llm_config)
+# job_posting_crew = JobPostingCrew()
