@@ -1,0 +1,150 @@
+{
+  "default-gpt-4o-merged": {
+    "individual_runs": [
+      {
+        "duration": 93.7,
+        "cost": 0.05003,
+        "llms": 12,
+        "tools": 5
+      },
+      {
+        "duration": 112.4,
+        "cost": 0.067937,
+        "llms": 14,
+        "tools": 7
+      },
+      {
+        "duration": 106.7,
+        "cost": 0.054262,
+        "llms": 13,
+        "tools": 6
+      },
+      {
+        "duration": 119.9,
+        "cost": 0.053898,
+        "llms": 13,
+        "tools": 5
+      },
+      {
+        "duration": 137.0,
+        "cost": 0.056453,
+        "llms": 14,
+        "tools": 6
+      },
+      {
+        "duration": 127.5,
+        "cost": 0.077823,
+        "llms": 16,
+        "tools": 9
+      },
+      {
+        "duration": 125.4,
+        "cost": 0.04895,
+        "llms": 12,
+        "tools": 5
+      },
+      {
+        "duration": 112.2,
+        "cost": 0.046837,
+        "llms": 13,
+        "tools": 5
+      },
+      {
+        "duration": 119.4,
+        "cost": 0.059475,
+        "llms": 14,
+        "tools": 7
+      }
+    ],
+    "averages": {
+      "duration": 117.13333333333334,
+      "cost": 0.05729611111111111,
+      "llms": 13.444444444444445,
+      "tools": 6.111111111111111
+    }
+  },
+  "default-gpt-4o-mini": {
+    "individual_runs": [
+      {
+        "duration": 173.3,
+        "cost": 0.041123,
+        "llms": 47,
+        "tools": 30
+      },
+      {
+        "duration": 100.0,
+        "cost": 0.003343,
+        "llms": 13,
+        "tools": 7
+      },
+      {
+        "duration": 118.8,
+        "cost": 0.010218,
+        "llms": 21,
+        "tools": 13
+      }
+    ],
+    "averages": {
+      "duration": 130.7,
+      "cost": 0.018228,
+      "llms": 27,
+      "tools": 16.666666666666668
+    }
+  },
+  "gpt4o-for-search": {
+    "individual_runs": [
+      {
+        "duration": 112.7,
+        "cost": 0.045865,
+        "llms": 20,
+        "tools": 10
+      },
+      {
+        "duration": 104.0,
+        "cost": 0.074193,
+        "llms": 41,
+        "tools": 32
+      },
+      {
+        "duration": 90.3,
+        "cost": 0.053491,
+        "llms": 17,
+        "tools": 8
+      }
+    ],
+    "averages": {
+      "duration": 102.33333333333333,
+      "cost": 0.05784966666666667,
+      "llms": 26,
+      "tools": 16.666666666666668
+    }
+  },
+  "mini-for-search": {
+    "individual_runs": [
+      {
+        "duration": 123.7,
+        "cost": 0.031262,
+        "llms": 28,
+        "tools": 19
+      },
+      {
+        "duration": 171.1,
+        "cost": 0.073584,
+        "llms": 47,
+        "tools": 36
+      },
+      {
+        "duration": 167.9,
+        "cost": 0.024815,
+        "llms": 27,
+        "tools": 21
+      }
+    ],
+    "averages": {
+      "duration": 154.23333333333335,
+      "cost": 0.04322033333333333,
+      "llms": 34,
+      "tools": 25.333333333333332
+    }
+  }
+}
