@@ -1,0 +1,105 @@
+{
+    "workflow_name": "long_file_translate",
+    "total_iterations": 5,
+    "timestamp_range": {
+        "start": "2024-12-03T17:03:21.412246",
+        "end": "2024-12-03T17:25:10.095391"
+    },
+    "iterations": [
+        {
+            "iteration": 1,
+            "timestamp": "2024-12-03T17:03:21.412246",
+            "workflow_name": "long_file_translate",
+            "ray_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/long_file_translate_ray.py",
+                "success": true,
+                "execution_time": 72.45980882644653,
+                "error": null
+            },
+            "normal_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/long_file_translate.py",
+                "success": true,
+                "execution_time": 272.86692214012146,
+                "error": null
+            }
+        },
+        {
+            "iteration": 2,
+            "timestamp": "2024-12-03T17:09:09.921889",
+            "workflow_name": "long_file_translate",
+            "ray_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/long_file_translate_ray.py",
+                "success": true,
+                "execution_time": 59.91754770278931,
+                "error": null
+            },
+            "normal_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/long_file_translate.py",
+                "success": true,
+                "execution_time": 288.59049463272095,
+                "error": null
+            }
+        },
+        {
+            "iteration": 3,
+            "timestamp": "2024-12-03T17:14:22.252846",
+            "workflow_name": "long_file_translate",
+            "ray_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/long_file_translate_ray.py",
+                "success": true,
+                "execution_time": 61.82355976104736,
+                "error": null
+            },
+            "normal_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/long_file_translate.py",
+                "success": true,
+                "execution_time": 250.50597882270813,
+                "error": null
+            }
+        },
+        {
+            "iteration": 4,
+            "timestamp": "2024-12-03T17:19:52.298452",
+            "workflow_name": "long_file_translate",
+            "ray_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/long_file_translate_ray.py",
+                "success": true,
+                "execution_time": 63.00787663459778,
+                "error": null
+            },
+            "normal_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/long_file_translate.py",
+                "success": true,
+                "execution_time": 267.035932302475,
+                "error": null
+            }
+        },
+        {
+            "iteration": 5,
+            "timestamp": "2024-12-03T17:25:10.095391",
+            "workflow_name": "long_file_translate",
+            "ray_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/long_file_translate_ray.py",
+                "success": true,
+                "execution_time": 58.27998971939087,
+                "error": null
+            },
+            "normal_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/long_file_translate.py",
+                "success": true,
+                "execution_time": 259.5156178474426,
+                "error": null
+            }
+        }
+    ],
+    "summary": {
+        "ray_version": {
+            "successful_runs": 5,
+            "average_time": 63.09775652885437
+        },
+        "normal_version": {
+            "successful_runs": 5,
+            "average_time": 267.70298914909364
+        }
+    }
+}
