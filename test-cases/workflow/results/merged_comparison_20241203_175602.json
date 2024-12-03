@@ -1,0 +1,105 @@
+{
+    "workflow_name": "write_seo_blog_humanize",
+    "total_iterations": 5,
+    "timestamp_range": {
+        "start": "2024-12-03T17:31:58.433516",
+        "end": "2024-12-03T17:56:02.926722"
+    },
+    "iterations": [
+        {
+            "iteration": 1,
+            "timestamp": "2024-12-03T17:31:58.433516",
+            "workflow_name": "write_seo_blog_humanize",
+            "ray_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/write_seo_blog_humanize_ray.py",
+                "success": true,
+                "execution_time": 176.36394262313843,
+                "error": null
+            },
+            "normal_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/write_seo_blog_humanize.py",
+                "success": true,
+                "execution_time": 198.36804246902466,
+                "error": null
+            }
+        },
+        {
+            "iteration": 2,
+            "timestamp": "2024-12-03T17:36:36.182967",
+            "workflow_name": "write_seo_blog_humanize",
+            "ray_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/write_seo_blog_humanize_ray.py",
+                "success": true,
+                "execution_time": 147.3619828224182,
+                "error": null
+            },
+            "normal_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/write_seo_blog_humanize.py",
+                "success": true,
+                "execution_time": 130.38612151145935,
+                "error": null
+            }
+        },
+        {
+            "iteration": 3,
+            "timestamp": "2024-12-03T17:44:28.634491",
+            "workflow_name": "write_seo_blog_humanize",
+            "ray_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/write_seo_blog_humanize_ray.py",
+                "success": true,
+                "execution_time": 194.27552151679993,
+                "error": null
+            },
+            "normal_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/write_seo_blog_humanize.py",
+                "success": true,
+                "execution_time": 278.17470049858093,
+                "error": null
+            }
+        },
+        {
+            "iteration": 4,
+            "timestamp": "2024-12-03T17:49:30.947393",
+            "workflow_name": "write_seo_blog_humanize",
+            "ray_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/write_seo_blog_humanize_ray.py",
+                "success": true,
+                "execution_time": 168.05432319641113,
+                "error": null
+            },
+            "normal_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/write_seo_blog_humanize.py",
+                "success": true,
+                "execution_time": 134.25717449188232,
+                "error": null
+            }
+        },
+        {
+            "iteration": 5,
+            "timestamp": "2024-12-03T17:56:02.926722",
+            "workflow_name": "write_seo_blog_humanize",
+            "ray_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/write_seo_blog_humanize_ray.py",
+                "success": true,
+                "execution_time": 200.62143898010254,
+                "error": null
+            },
+            "normal_version": {
+                "path": "/root/knowledgeCache/AI-agent-for-deployment/test-cases/workflow/write_seo_blog_humanize.py",
+                "success": true,
+                "execution_time": 191.3564236164093,
+                "error": null
+            }
+        }
+    ],
+    "summary": {
+        "ray_version": {
+            "successful_runs": 5,
+            "average_time": 177.33544182777405
+        },
+        "normal_version": {
+            "successful_runs": 5,
+            "average_time": 186.50849251747132
+        }
+    }
+}
