@@ -63,6 +63,70 @@
       "tools": 6.111111111111111
     }
   },
+  "mini-for-search": {
+    "individual_runs": [
+      {
+        "duration": 123.7,
+        "cost": 0.031262,
+        "llms": 28,
+        "tools": 19
+      },
+      {
+        "duration": 171.1,
+        "cost": 0.073584,
+        "llms": 47,
+        "tools": 36
+      },
+      {
+        "duration": 167.9,
+        "cost": 0.024815,
+        "llms": 27,
+        "tools": 21
+      },
+      {
+        "duration": 110.1,
+        "cost": 0.022005,
+        "llms": 22,
+        "tools": 13
+      },
+      {
+        "duration": 152.1,
+        "cost": 0.060413,
+        "llms": 37,
+        "tools": 26
+      },
+      {
+        "duration": 124.3,
+        "cost": 0.066238,
+        "llms": 37,
+        "tools": 29
+      },
+      {
+        "duration": 85.0,
+        "cost": 0.017796,
+        "llms": 15,
+        "tools": 6
+      },
+      {
+        "duration": 122.8,
+        "cost": 0.029288,
+        "llms": 24,
+        "tools": 15
+      },
+      {
+        "duration": 128.6,
+        "cost": 0.056469,
+        "llms": 37,
+        "tools": 26
+      }
+    ],
+    "averages": {
+      "duration": 131.73333333333332,
+      "cost": 0.04243,
+      "llms": 30.444444444444443,
+      "tools": 21.22222222222222
+    }
+  },
   "default-gpt-4o-mini": {
     "individual_runs": [
       {
@@ -117,34 +181,6 @@
       "cost": 0.05784966666666667,
       "llms": 26,
       "tools": 16.666666666666668
-    }
-  },
-  "mini-for-search": {
-    "individual_runs": [
-      {
-        "duration": 123.7,
-        "cost": 0.031262,
-        "llms": 28,
-        "tools": 19
-      },
-      {
-        "duration": 171.1,
-        "cost": 0.073584,
-        "llms": 47,
-        "tools": 36
-      },
-      {
-        "duration": 167.9,
-        "cost": 0.024815,
-        "llms": 27,
-        "tools": 21
-      }
-    ],
-    "averages": {
-      "duration": 154.23333333333335,
-      "cost": 0.04322033333333333,
-      "llms": 34,
-      "tools": 25.333333333333332
     }
   }
 }

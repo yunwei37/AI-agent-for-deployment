@@ -122,21 +122,21 @@ def create_bar_charts(results):
     return fig
 
 def main():
-    base_path = "/root/knowledgeCache/AI-agent-for-deployment/test-cases/job-posting/results"
+    base_path = "/workspaces/AI-agent-for-deployment/test-cases/job-posting/results"
     
     # Define experiment groups
     merged_experiments = ["default-gpt-4o", "default-gpt-4o1", "default-gpt-4o2"]
     other_experiments = [
         "default-gpt-4o-mini",
         "gpt4o-for-search",
-        "mini-for-search"
+        # "mini-for-search"
     ]
     
     results = {}
     
     # Process merged experiments
     results["default-gpt-4o-merged"] = process_merged_experiments(base_path, merged_experiments)
-    
+    results["mini-for-search"] = process_merged_experiments(base_path, ["mini-for-search", "mini-for-search1", "mini-for-search2"])
     # Process other experiments normally
     for exp in other_experiments:
         results[exp] = process_experiment(base_path, exp)
