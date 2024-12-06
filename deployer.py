@@ -61,16 +61,18 @@ def main():
     ray_command = f"python manager/generate_ray_code.py {app_path}"
     subprocess.run(ray_command, shell=True, text=True)
     
-    # print the generated ray code in {app_path}_ray.py
-    with open(f"{app_path}_ray.py", "r") as file:
+    ray_file = os.path.splitext(app_path)[0] + "_ray.py"
+    
+    # print the generated ray code
+    with open(ray_file, "r") as file:
         print(file.read())
     print("--------------------------------")
-
-    # ask user to confim and run it
+    
+    # ask user to confirm and run it
     run_it = input("Do you want to run the Ray-based implementation? (yes/no): ")
     if run_it.lower() == 'yes':
-        subprocess.run(f"python {app_path}_ray.py", shell=True)
-
+        subprocess.run(f"python {ray_file}", shell=True)
+    
     print("Process completed successfully.")
 
 if __name__ == "__main__":

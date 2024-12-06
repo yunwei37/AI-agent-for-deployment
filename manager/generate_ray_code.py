@@ -23,7 +23,7 @@ def convert_to_ray(content):
         "preprocessing, inference, and postprocessing are distributed across Ray actors "
         "or tasks, maximizing parallelism. Optimize the implementation for scalability and "
         "fault tolerance while maintaining the same functional output.\n\n"
-        "\noutput the ray code only."
+        "\noutput the ray code only. Do not include any other text and ````python`."
         "===========================\n\n"
         f"Original Code:\n{content}"
     )
