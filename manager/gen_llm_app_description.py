@@ -40,7 +40,7 @@ def main():
     if not os.path.isfile(input_file):
         print(f"Error: File '{input_file}' does not exist.")
         sys.exit(1)
-
+    print(f"Generating descriptions for {input_file}...")
     # Read the source code
     source_code = read_file(input_file)
 
